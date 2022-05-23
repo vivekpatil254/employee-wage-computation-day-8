@@ -9,8 +9,9 @@ public class EmployeeWageComputationMain {
         System.out.println("Welcome to employee wage computation program ...");
         EmployeeWage employee1 = new EmployeeWage();
         Random rd = new Random();
+        employee1.getadata();
         int choice;
-        for (int i = 0; i < 20&&employee1.totalHours<=100; i++) {
+        for (int i = 0; i < employee1.numberOfWorkingDays&&employee1.totalHours<=employee1.workingHours; i++) {
             choice = rd.nextInt(3);
             switch (choice) {
                 case 0:
@@ -25,5 +26,6 @@ public class EmployeeWageComputationMain {
             }
             System.out.println();
         }
+        employee1.display();
     }
 }
